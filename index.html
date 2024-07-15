@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>余卓航 | Zhuohang Yu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        #container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007BFF;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        h2 {
+            color: #007BFF;
+            margin-top: 30px;
+            font-size: 24px;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #container section {
+            padding-bottom: 20px;
+        }
+
+        #container section:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 两栏布局样式 */
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column-left {
+            width: 100%;
+        }
+
+        .column-right {
+            width: 100%;
+        }
+
+        @media (min-width: 600px) {
+            .column-left {
+                width: 50%;
+            }
+
+            .column-right {
+                width: 50%;
+            }
+        }
+
+        table {
+            width: calc(100% - 30px);
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border-top: 0px;
+            border-bottom: 1px dashed black;
+            border-left: 0px;
+            border-right: 0px;
+            padding: 10px;
+            text-align: left;
+            color: black;
+        }
+
+        .personal_information {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>简历</h1>
+        <section>
+            <h2>个人信息</h2>
+            <div class="personal_information">
+                <img src="Picture\YuZhuohang.png" alt="YuZhuohang.png" width="140px">
+                <div style="margin-left: 20px">
+                    <table>
+                        <tr>
+                            <td width=80px><b>姓名</b></td>
+                            <td width=220px>余卓航</td>
+                            <td width=80px><b>电话</b></td>
+                            <td width=220px>15623365668</td>
+                        </tr>
+                        <tr>
+                            <td><b>性别</b></td>
+                            <td>男</td>
+                            <td><b>邮箱</b></td>
+                            <td><a href="mailto:yuzhuohang2004@outlook.com">yuzhuohang2004@outlook.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>名族</b></td>
+                            <td>汉</td>
+                            <td><b>QQ</b></td>
+                            <td>898430524</td>
+                        </tr>
+                        <tr>
+                            <td><b>籍贯</b></td>
+                            <td>湖北随州</td>
+                            <td><b>微信</b></td>
+                            <td>YuZhuohang_WeChat</td>
+
+                        </tr>
+                        <tr>
+                            <td><b>出生</b></td>
+                            <td>2004.7.29</td>
+                            <td><b>年龄</b></td>
+                            <td id="age"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>教育背景</h2>
+            <div class="two-columns">
+                <div class="column-left">
+                    <p><b>本科院校</b>: 湖北工业大学</p>
+                    <p><b>本科专业</b>: 集成电路设计与集成系统</p>
+                    <p><b>本科毕业时间</b>: 2026.6</p>
+                    <p><b>平均绩点</b>: 3.2767，专业排名23/86</p>
+                    <p><b>算术平均分</b>: 84.84分，专业排名17/86</p>
+                    <p><b>综合素质测评</b>: 93.047分，班级排名1/43</p>
+                    <p><b>主修课程</b>:
+                    <ul>
+                        <li>电路分析</li>
+                        <li>模拟电子技术基础</li>
+                        <li>数字电子技术基础</li>
+                        <li>半导体物理与器件</li>
+                        <li>高等数学</li>
+                        <li>线性代数</li>
+                        <li>概率论与数理统计</li>
+                        <!-- 可根据实际情况添加更多课程 -->
+                    </ul>
+                    </p>
+                </div>
+                <div class="column-right">
+                    <p><b>一志愿报考院校</b>: 东南大学</p>
+                    <p><b>报考类型</b>: 学硕</p>
+                    <p><b>报考学院</b>: 集成电路学院</p>
+                    <p><b>报考专业</b>: 集成电路科学与工程</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>研究兴趣与方向</h2>
+            <!-- <p style="text-indent: 2em;">我对 <b>集成电路设计</b> 有着浓厚的兴趣，尤其关注 <b>模拟IC设计</b> 和
+                <b>数字IC设计</b> 等方面。我的研究目标是
+                <b>[阐述你的研究目标]</b> ，期望通过深入研究为该领域做出贡献。
+            </p> -->
+        </section>
+
+        <section>
+            <h2>专业技能</h2>
+            <div>
+                <ul>
+                    <li>熟练掌握多种编程语言，如 <b>C</b>、<b>Python</b>、<b>HTML</b>、<b>CSS</b>、<b>JavaScript</b>、<b>Markdown</b>
+                        等</li>
+                    <li>精通办公工具软件，如 <b>Word</b>、<b>Excel</b>、<b>PowerPoint</b> 等</li>
+                    <li>熟练使用多种科研工具软件，如<b>LaTeX</b>、<b>Origin</b>、<b>VSCode</b>、<b>MATLAB</b>、<b>Git</b>、<b>嘉立创EDA</b>、<b>Multisim</b>、<b>Keil5</b>
+                        等</li>
+                    <li>熟悉影视后期相关软件，如<b>Photoshop</b>、<b>Premiere Pro</b>、<b>After Effects</b> 等</li>
+                    <li>通过<b>CET4</b>，具备良好的英语听说读写能力，能够流畅阅读和翻译专业文献。</li>
+                    <li>掌握前端网页开发、应用程序开发等技术</li>
+                    <li>能够熟练绘制与封装PCB电路板</li>
+                    <!-- 可根据实际情况添加更多技能 -->
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>项目经历</h2>
+            <p><b>智控利刃，微创之光——止血精度可控的微创手术设备</b>: 2023.4 - 2023.9</p>
+            <!-- <p>项目描述: [详细描述项目背景、目标和需求]</p>
+            <p>我的职责: 
+            <ul>
+                <li>制作路演、答辩PPT</li>
+                <li>撰写项目计划书、企划书</li>
+            </ul>
+            </p>
+            <p>项目成果: [列举项目的成果，如完成的报告、开发的系统等]</p> -->
+            <p><b>暏菊知终——芯棚友领跑智慧农业助力乡村振兴</b>: 2023.7 - 2023.12</p>
+            <!-- <p>项目描述: [详细描述项目背景、目标和需求]</p>
+            <p>我的职责: 
+            <ul>
+                <li>[职责 1 描述]</li>
+                <li>[职责 2 描述]</li>
+            </ul>
+            </p>
+            <p>项目成果: [列举项目的成果，如完成的报告、开发的系统等]</p> -->
+            <p><b>声道守望——声源定位救援无人机</b>: 2023.10 - 2024.7</p>
+            <p><b>基于Coetex-M0的视频处理系统</b>: 2024.6 - 2024.9</p>
+        </section>
+
+        <section>
+            <h2>学生职务</h2>
+            <p><b>湖北工业大学IC协会组织部干事</b>: 2022.9 - 2023.6</p>
+            <p><b>湖北工业大学IC协会组织部部长</b>: 2023.6 - 2024.6</p>
+            <p><b>湖北工业大学IC协会会长</b>: 2024.6 - 2025.6</p>
+            <p><b>湖北工业大学理学院朋辈导师</b>: 2024.4 - 2025.4</p>
+        </section>
+
+        <section>
+            <h2>创业与实习经历</h2>
+            <h3><b>湖北省迅航科技有限公司（Hubei Xunhang Technology Co., LTD）</b>: 2023.10 - 2024.9</h3>
+            <p><b>公司职务: </b>监事、法定代表人、CEO</p>
+            <p><b>工作内容: </b>
+            <ul>
+                <li>战略规划与决策: 制定公司的长期战略方向和目标，明确公司的发展愿景和使命。</li>
+                <li>领导与管理团队: 建立积极的企业文化，促进团队的凝聚力和创造力，确保团队的协作和高效运作。</li>
+                <li>产品研发与创新: 基于市场需求和公司战略，设计和开发新的产品或改进现有产品的功能和性能。</li>
+                <li>新技术研究与探索: 持续关注行业技术动态和前沿趋势，进行前瞻性的技术研究。</li>
+                <!-- 可根据实际情况添加更多工作内容 -->
+            </ul>
+            </p>
+            <p><b>创业历程: </b>
+            <ul>
+                <li>2023.4 加入童亚拉教授带领团队“微创之光”，参与“智控利刃，微创之光——止血精度可控的微创手术设备”项目</li>
+                <li>2023.7 参与“暏菊知终——芯棚友领跑智慧农业助力乡村振兴”项目</li>
+                <li>2023.9 首次入驻湖北工业大学大学生创业园</li>
+                <li>2023.10 作为团队负责人，在闵锐教授的指导下，立项“声道守望——声源定位救援无人机”项目</li>
+                <li>2023.12 作为团队负责人，带领团队入驻湖北工业大学大学生创业园</li>
+                <li>2024.1 注册成立湖北省迅航科技有限公司，担任首席执行官</li>
+            </ul>
+            </p>
+
+            <!-- <p><b>[实习公司名称 1]</b>: [实习时间]</p>
+            <p>实习岗位: [岗位名称]</p>
+            <p>工作内容: 
+            <ul>
+                <li>[工作内容 1 描述]</li>
+                <li>[工作内容 2 描述]</li>
+            </ul>
+            </p>
+            <p>工作成果: [列举工作的成果，如完成的项目、提出的改进方案等]</p> -->
+        </section>
+
+        <section>
+            <h2>校园与社会活动</h2>
+            <p style="text-indent: 2em;">本科在校期间，积极参与学术讲座、校园文化活动与社会公益活动，累计志愿服务时长100.3小时。</p>
+            <p><b>参加湖北工业大学理学院“挑战杯”学术分享报告会</b>: 2023.9.1</p>
+            <p><b>参加河湖长制工作宣传进农村公益活动</b>: 2023.12.8</p>
+            <p><b>在江苏西交利物浦大学参加第十一届中国地区iGEMer交流会（CCiC）</b>: 2024.7.11 - 2024.7.14</p>
+        </section>
+
+        <section>
+            <h2>竞赛奖项</h2>
+            <p style="text-indent: 2em;">本科阶段累计参加学科竞赛30余项，获得奖项校级1项，省级4项，国家级3项，国际级1项，合计共9项。</p>
+            <!-- <p><b>国际基因工程机器大赛(iGEM) 金奖 [国际级]</b>: 2024.11</p> -->
+            <p><b>2024年(第十届)全国大学生统计建模大赛 三等奖 [省级]</b>: 2024.7</p>
+            <p><b><a href="Picture\第17届中国大学生计算机设计大赛.png">第17届中国大学生计算机设计大赛 三等奖 [省级]</b></a>: 2024.5</p>
+            <p><a href="Picture\第十三届APMCM亚太地区大学生数学建模竟赛.png"><b>第十三届APMCM亚太地区大学生数学建模竟赛 三等奖 [国家级]</b></a>: 2024.1</p>
+            <p><b><a href="Picture\2023年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2023.12</p>
+            <p><b><a href="Picture\第二届“BETT杯”全国大学生英语词汇大赛.png">第二届“BETT杯”全国大学生英语词汇大赛 三等奖 [国家级]</b></a>: 2023.11</p>
+            <p><b><a href="Picture\湖北工业大学第九届“质量杯”机器人创新大赛.png">湖北工业大学第九届“质量杯”机器人创新大赛 一等奖 [校级]</b></a>: 2023.11</p>
+            <p><b><a href="Picture\2022年第一届国际大学生英语作文挑战赛(IEECCS).png">2022年第一届国际大学生英语作文挑战赛(IEECCS) 三等奖 [国际级]</b></a>: 2023.1</p>
+            <p><b><a href="Picture\2022年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2022.12</p>
+            <p><b><a href="Picture\2022年“BETT杯”全国大学生英语词汇大赛.png">2022年“BETT杯”全国大学生英语词汇大赛 一等奖 [国家级]</b></a>: 2022.11</p>
+        </section>
+
+        <section>
+            <h2>荣誉与奖学金</h2>
+            <p><b><a href="Picture\荣誉证书.png">“大学生标兵"荣誉称号</b></a>: 2023.11</p>
+            <p><b><a href="Picture\荣誉证书.png">一等奖学金</b></a>: 2023.11</p>
+            <p><b>国家励志奖学金</b>: 2023.11</p>
+        </section>
+
+        <section>
+            <h2>自我评价</h2>
+            <p style="text-indent: 2em;">
+                我具备较强的学习能力和适应能力，能够快速掌握新知识和技能。在本科期间，通过不断努力，我取得了优异的成绩，同时也积累了丰富的项目和实习经验。我善于团队合作，能够与不同背景的人有效沟通和协作。对待工作认真负责，注重细节，能够在压力下保持良好的工作状态。我相信，这些品质将有助于我在研究生阶段取得更好的成绩，并为未来的职业发展打下坚实的基础。
+            </p>
+        </section>
+    </div>
+
+    <script>
+        var today = new Date();
+        var birthDate = new Date(2004, 6, 29);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        if (today.getMonth() < birthDate.getMonth() || (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        document.getElementById("age").innerHTML = age;
+    </script>
+</body>
+
+</html>
