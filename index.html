@@ -92,14 +92,14 @@
             }
         }
 
-        table {
+        .personal_information table {
             width: calc(100% - 30px);
             margin-top: 10px;
             margin-bottom: 20px;
         }
 
-        th,
-        td {
+        .personal_information th,
+        .personal_information td {
             border-top: 0px;
             border-bottom: 1px dashed black;
             border-left: 0px;
@@ -112,6 +112,19 @@
         .personal_information {
             display: flex;
             align-items: center;
+        }
+
+        .score th,
+        .score td {
+            border: 1px solid #333;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .score {
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -180,26 +193,44 @@
                         <li>高等数学</li>
                         <li>线性代数</li>
                         <li>概率论与数理统计</li>
-                        <!-- 可根据实际情况添加更多课程 -->
                     </ul>
                     </p>
+                    <p><b>毕业设计</b>: </p>
                 </div>
                 <div class="column-right">
                     <p><b>一志愿报考院校</b>: 东南大学</p>
                     <p><b>报考类型</b>: 学硕</p>
                     <p><b>报考学院</b>: 集成电路学院</p>
                     <p><b>报考专业</b>: 集成电路科学与工程</p>
+                    <p><b>初试成绩</b>: </p>
+                    <table class="score">
+                        <tr>
+                            <th>思想政治理论</th>
+                            <th>英语（一）</th>
+                            <th>数学（一）</th>
+                            <th>电子技术基础</th>
+                            <th>总分</th>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>/</td>
+                        </tr>
+                    </table>
+                    <p><b>初试排名</b>: </p>
                 </div>
             </div>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>研究兴趣与方向</h2>
-            <!-- <p style="text-indent: 2em;">我对 <b>集成电路设计</b> 有着浓厚的兴趣，尤其关注 <b>模拟IC设计</b> 和
+            <p style="text-indent: 2em;">我对 <b>集成电路设计</b> 有着浓厚的兴趣，尤其关注 <b>模拟IC设计</b> 和
                 <b>数字IC设计</b> 等方面。我的研究目标是
                 <b>[阐述你的研究目标]</b> ，期望通过深入研究为该领域做出贡献。
-            </p> -->
-        </section>
+            </p>
+        </section> -->
 
         <section>
             <h2>专业技能</h2>
@@ -208,9 +239,10 @@
                     <li>熟练掌握多种编程语言，如 <b>C</b>、<b>Python</b>、<b>HTML</b>、<b>CSS</b>、<b>JavaScript</b>、<b>Markdown</b>
                         等</li>
                     <li>精通办公工具软件，如 <b>Word</b>、<b>Excel</b>、<b>PowerPoint</b> 等</li>
-                    <li>熟练使用多种科研工具软件，如<b>LaTeX</b>、<b>Origin</b>、<b>VSCode</b>、<b>MATLAB</b>、<b>Git</b>、<b>嘉立创EDA</b>、<b>Multisim</b>、<b>Keil5</b>
+                    <li>熟练使用多种科研工具软件，如
+                        <b>LaTeX</b>、<b>Origin</b>、<b>VSCode</b>、<b>MATLAB</b>、<b>Git</b>、<b>嘉立创EDA</b>、<b>Multisim</b>、<b>Keil5</b>
                         等</li>
-                    <li>熟悉影视后期相关软件，如<b>Photoshop</b>、<b>Premiere Pro</b>、<b>After Effects</b> 等</li>
+                    <li>熟悉影视后期相关软件，如 <b>Photoshop</b>、<b>Premiere Pro</b>、<b>After Effects</b> 等</li>
                     <li>通过<b>CET4</b>，具备良好的英语听说读写能力，能够流畅阅读和翻译专业文献。</li>
                     <li>掌握前端网页开发、应用程序开发等技术</li>
                     <li>能够熟练绘制与封装PCB电路板</li>
@@ -236,7 +268,8 @@
 
         <section>
             <h2>创业与实习经历</h2>
-            <h3><a href="Picture\营业执照.png"><b>湖北省迅航科技有限公司（Hubei Xunhang Technology Co., LTD）</b></a>: 2023.10 - 2024.9</h3>
+            <h3><a href="Picture\营业执照.png"><b>湖北省迅航科技有限公司（Hubei Xunhang Technology Co., LTD）</b></a>: 2023.10 - 2024.9
+            </h3>
             <p><b>公司职务: </b>监事、法定代表人、CEO</p>
             <p><b>工作内容: </b>
             <ul>
@@ -286,7 +319,8 @@
             <p><b><a href="Picture\2023年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2023.12</p>
             <p><b><a href="Picture\第二届“BETT杯”全国大学生英语词汇大赛.png">第二届“BETT杯”全国大学生英语词汇大赛 三等奖 [国家级]</b></a>: 2023.11</p>
             <p><b><a href="Picture\湖北工业大学第九届“质量杯”机器人创新大赛.png">湖北工业大学第九届“质量杯”机器人创新大赛 一等奖 [校级]</b></a>: 2023.11</p>
-            <p><b><a href="Picture\2022年第一届国际大学生英语作文挑战赛(IEECCS).png">2022年第一届国际大学生英语作文挑战赛(IEECCS) 三等奖 [国际级]</b></a>: 2023.1</p>
+            <p><b><a href="Picture\2022年第一届国际大学生英语作文挑战赛(IEECCS).png">2022年第一届国际大学生英语作文挑战赛(IEECCS) 三等奖 [国际级]</b></a>:
+                2023.1</p>
             <p><b><a href="Picture\2022年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2022.12</p>
             <p><b><a href="Picture\2022年“BETT杯”全国大学生英语词汇大赛.png">2022年“BETT杯”全国大学生英语词汇大赛 一等奖 [国家级]</b></a>: 2022.11</p>
         </section>
