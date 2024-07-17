@@ -13,6 +13,45 @@
             background-color: #f8f9fa;
         }
 
+        html {
+            overflow: hidden;
+        }
+
+        #mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            opacity: 1;
+        }
+
+        #typingText {
+            color: white;
+            font-size: 48px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 600px) {
+            #typingText {
+                font-size: 32px;
+            }
+        }
+
+        #mask.opacity-zero {
+            opacity: 0;
+        }
+
+        html.mask-disappeared {
+            overflow: auto;
+        }
+
         #container {
             width: 80%;
             max-width: 800px;
@@ -155,6 +194,8 @@
 </head>
 
 <body>
+    <div id="mask"></div>
+
     <div id="container">
         <h1>简历</h1>
         <section>
@@ -394,6 +435,78 @@
     </div>
 
     <script>
+        function typeWriter(text, element, delay) {
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                    setTimeout(() => {
+                        let deletionTimer = setInterval(() => {
+                            if (element.innerHTML.length > 0) {
+                                element.innerHTML = element.innerHTML.slice(0, -1);
+                            } else {
+                                clearInterval(deletionTimer);
+                                setTimeout(() => {
+                                    const newText = "Nice to meet you!";
+                                    i = 0;
+                                    timer = setInterval(() => {
+                                        if (i < newText.length) {
+                                            element.innerHTML += newText.charAt(i);
+                                            i++;
+                                        } else {
+                                            clearInterval(timer);
+                                            setTimeout(() => {
+                                                let deletionTimer = setInterval(() => {
+                                                    if (element.innerHTML.length > 0) {
+                                                        element.innerHTML = element.innerHTML.slice(0, -1);
+                                                    } else {
+                                                        clearInterval(deletionTimer);
+                                                        setTimeout(() => {
+                                                            const mask = document.getElementById('mask');
+                                                            mask.style.transition = 'opacity 3s ease';
+                                                            mask.style.opacity = '0';
+                                                        }, 500);
+                                                        setTimeout(() => {
+                                                            mask.style.display = 'none';
+                                                            element.style.display = 'none';
+                                                            document.getElementById('mask').classList.add('opacity-zero');
+                                                            document.getElementsByTagName('html')[0].classList.add('mask-disappeared');
+                                                        }, 1000);
+                                                    }
+                                                }, 1000);
+                                            }, 1000);
+                                        }
+                                    }, delay);
+                                }, 1000);
+                            }
+                        }, delay);
+                    }, 1000);
+                }
+            }, delay);
+        }
+
+        function adjustTextSize() {
+            if (window.innerWidth < 600) {
+                document.getElementById('typingText').style.fontSize = '32px';
+            } else {
+                document.getElementById('typingText').style.fontSize = '48px';
+            }
+        }
+
+        window.onload = adjustTextSize;
+        window.addEventListener('resize', adjustTextSize);
+
+        window.onload = function () {
+            const text = "Hello, I'm Zhuohang Yu!";
+            const element = document.createElement('p');
+            element.id = 'typingText';
+            document.getElementById('mask').appendChild(element);
+            typeWriter(text, element, 100);
+        };
+
         var today = new Date();
         var birthDate = new Date(2004, 6, 29);
         var age = today.getFullYear() - birthDate.getFullYear();
