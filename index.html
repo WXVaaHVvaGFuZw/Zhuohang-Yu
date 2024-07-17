@@ -68,7 +68,6 @@
             text-decoration: underline;
         }
 
-        /* 两栏布局样式 */
         .two-columns {
             display: flex;
             flex-wrap: wrap;
@@ -125,6 +124,31 @@
             border-collapse: collapse;
             font-family: Arial, sans-serif;
             font-size: 14px;
+        }
+
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+            color: #666;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 13px;
+        }
+
+        .scroll-text {
+            position: relative;
+            left: 100%;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -65%;
+            }
         }
     </style>
 </head>
@@ -268,6 +292,10 @@
                         of New Energy Electric Vehicles in China</a></b>: 2023.11.23 - 2023.11.26</p>
             <p><b><a href="PDF\基于中国百年月降水量大数据的统计建模与预测模型研究.pdf">基于中国百年月降水量大数据的统计建模与预测模型研究</a></b>: 2024.3.15 - 2024.5.15
             </p>
+            <div class="scroll-container">
+                <div class="scroll-text">点击论文查看或下载论文PDF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on
+                    the paper to view or download the paper PDF</div>
+            </div>
         </section>
 
         <section>
@@ -301,6 +329,10 @@
                 <li>2024.1 注册成立湖北省迅航科技有限公司，担任首席执行官</li>
             </ul>
             </p>
+            <div class="scroll-container">
+                <div class="scroll-text">点击公司查看营业执照&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on the
+                    company to view the business license</div>
+            </div>
 
             <!-- <p><b>[实习公司名称 1]</b>: [实习时间]</p>
             <p>实习岗位: [岗位名称]</p>
@@ -335,6 +367,10 @@
                 2023.1</p>
             <p><b><a href="Picture\2022年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2022.12</p>
             <p><b><a href="Picture\2022年“BETT杯”全国大学生英语词汇大赛.png">2022年“BETT杯”全国大学生英语词汇大赛 一等奖 [国家级]</b></a>: 2022.11</p>
+            <div class="scroll-container">
+                <div class="scroll-text">点击奖项查看获奖证书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click on the
+                    award to view the award certificate</div>
+            </div>
         </section>
 
         <section>
@@ -342,6 +378,10 @@
             <p><b><a href="Picture\荣誉证书.png">“大学生标兵"荣誉称号</b></a>: 2023.11</p>
             <p><b><a href="Picture\荣誉证书.png">一等奖学金</b></a>: 2023.11</p>
             <p><b>国家励志奖学金</b>: 2023.11</p>
+            <div class="scroll-container">
+                <div class="scroll-text">点击荣誉查看荣誉证书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click Honor to
+                    view the certificate of Honor</div>
+            </div>
         </section>
 
         <section>
