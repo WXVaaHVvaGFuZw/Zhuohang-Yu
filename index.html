@@ -13,7 +13,7 @@
             background-color: #f8f9fa;
         }
 
-        html {
+        /* html {
             overflow: hidden;
         }
 
@@ -50,7 +50,7 @@
 
         html.mask-disappeared {
             overflow: auto;
-        }
+        } */
 
         #container {
             width: 80%;
@@ -194,7 +194,7 @@
 </head>
 
 <body>
-    <div id="mask"></div>
+    <!-- <div id="mask"></div> -->
 
     <div id="container">
         <h1>简历</h1>
@@ -247,8 +247,8 @@
                     <p><b>本科院校</b>: 湖北工业大学</p>
                     <p><b>本科专业</b>: 集成电路设计与集成系统</p>
                     <p><b>本科毕业时间</b>: 2026.6</p>
-                    <p><b>平均绩点</b>: 3.2507，专业排名21/86</p>
-                    <p><b>算术平均分</b>: 84.64分，专业排名16/86</p>
+                    <p><b>平均绩点</b>: 3.2664，专业排名21/86，班级排名10/42</p>
+                    <p><b>算术平均分</b>: 84.75分，专业排名18/86，班级排名8/42</p>
                     <p><b>综合素质测评</b>: 93.047分，班级排名1/43</p>
                     <!-- <p><b>主修课程</b>:
                     <ul>
@@ -300,9 +300,11 @@
 
         <section>
             <h2>竞赛奖项</h2>
-            <p style="text-indent: 2em;">本科阶段累计参加学科竞赛30余项，获得奖项校级1项，省级4项，国家级3项，国际级1项，合计共9项。</p>
+            <p style="text-indent: 2em;">本科阶段累计参加学科竞赛30余项，获得奖项校级1项，省级5项，国家级4项，国际级1项，合计共11项。</p>
             <!-- <p><b>国际基因工程机器大赛(iGEM) 金奖 [国际级]</b>: 2024.11</p> -->
-            <p><b><a href="Picture/2024年(第十届)全国大学生统计建模大赛.png">2024年(第十届)全国大学生统计建模大赛 三等奖 [省级]</b></a>: 2024.7</p>
+            <p><b><a href="Picture\2024年第五届“华数杯”全国大学生数学建模竞赛.png">2024年第五届“华数杯”全国大学生数学建模竞赛 二等奖 [国家级]</b></a>: 2024.8</p>
+            <p><b><a href="Picture\第八届（2024）全国大学生集成电路创新创业大赛.png">第八届（2024）全国大学生集成电路创新创业大赛 三等奖 [省级]</b></a>: 2024.7</p>
+            <p><b><a href="Picture\2024年(第十届)全国大学生统计建模大赛.png">2024年(第十届)全国大学生统计建模大赛 三等奖 [省级]</b></a>: 2024.7</p>
             <p><b><a href="Picture\第17届中国大学生计算机设计大赛.png">第17届中国大学生计算机设计大赛 三等奖 [省级]</b></a>: 2024.5</p>
             <p><a href="Picture\第十三届APMCM亚太地区大学生数学建模竟赛.png"><b>第十三届APMCM亚太地区大学生数学建模竟赛 三等奖 [国家级]</b></a>: 2024.1</p>
             <p><b><a href="Picture\2023年全国大学生英语翻译大赛.png">全国大学生英语翻译大赛 一等奖 [省级]</b></a>: 2023.12</p>
@@ -438,77 +440,77 @@
     </div>
 
     <script>
-        function typeWriter(text, element, delay) {
-            let i = 0;
-            const timer = setInterval(() => {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(timer);
-                    setTimeout(() => {
-                        let deletionTimer = setInterval(() => {
-                            if (element.innerHTML.length > 0) {
-                                element.innerHTML = element.innerHTML.slice(0, -1);
-                            } else {
-                                clearInterval(deletionTimer);
-                                setTimeout(() => {
-                                    const newText = "Nice to meet you!";
-                                    i = 0;
-                                    timer = setInterval(() => {
-                                        if (i < newText.length) {
-                                            element.innerHTML += newText.charAt(i);
-                                            i++;
-                                        } else {
-                                            clearInterval(timer);
-                                            setTimeout(() => {
-                                                let deletionTimer = setInterval(() => {
-                                                    if (element.innerHTML.length > 0) {
-                                                        element.innerHTML = element.innerHTML.slice(0, -1);
-                                                    } else {
-                                                        clearInterval(deletionTimer);
-                                                        setTimeout(() => {
-                                                            const mask = document.getElementById('mask');
-                                                            mask.style.transition = 'opacity 3s ease';
-                                                            mask.style.opacity = '0';
-                                                        }, 500);
-                                                        setTimeout(() => {
-                                                            mask.style.display = 'none';
-                                                            element.style.display = 'none';
-                                                            document.getElementById('mask').classList.add('opacity-zero');
-                                                            document.getElementsByTagName('html')[0].classList.add('mask-disappeared');
-                                                        }, 1000);
-                                                    }
-                                                }, 1000);
-                                            }, 1000);
-                                        }
-                                    }, delay);
-                                }, 1000);
-                            }
-                        }, delay);
-                    }, 1000);
-                }
-            }, delay);
-        }
+        // function typeWriter(text, element, delay) {
+        //     let i = 0;
+        //     const timer = setInterval(() => {
+        //         if (i < text.length) {
+        //             element.innerHTML += text.charAt(i);
+        //             i++;
+        //         } else {
+        //             clearInterval(timer);
+        //             setTimeout(() => {
+        //                 let deletionTimer = setInterval(() => {
+        //                     if (element.innerHTML.length > 0) {
+        //                         element.innerHTML = element.innerHTML.slice(0, -1);
+        //                     } else {
+        //                         clearInterval(deletionTimer);
+        //                         setTimeout(() => {
+        //                             const newText = "Nice to meet you!";
+        //                             i = 0;
+        //                             timer = setInterval(() => {
+        //                                 if (i < newText.length) {
+        //                                     element.innerHTML += newText.charAt(i);
+        //                                     i++;
+        //                                 } else {
+        //                                     clearInterval(timer);
+        //                                     setTimeout(() => {
+        //                                         let deletionTimer = setInterval(() => {
+        //                                             if (element.innerHTML.length > 0) {
+        //                                                 element.innerHTML = element.innerHTML.slice(0, -1);
+        //                                             } else {
+        //                                                 clearInterval(deletionTimer);
+        //                                                 setTimeout(() => {
+        //                                                     const mask = document.getElementById('mask');
+        //                                                     mask.style.transition = 'opacity 3s ease';
+        //                                                     mask.style.opacity = '0';
+        //                                                 }, 500);
+        //                                                 setTimeout(() => {
+        //                                                     mask.style.display = 'none';
+        //                                                     element.style.display = 'none';
+        //                                                     document.getElementById('mask').classList.add('opacity-zero');
+        //                                                     document.getElementsByTagName('html')[0].classList.add('mask-disappeared');
+        //                                                 }, 1000);
+        //                                             }
+        //                                         }, 1000);
+        //                                     }, 1000);
+        //                                 }
+        //                             }, delay);
+        //                         }, 1000);
+        //                     }
+        //                 }, delay);
+        //             }, 1000);
+        //         }
+        //     }, delay);
+        // }
 
-        function adjustTextSize() {
-            if (window.innerWidth < 600) {
-                document.getElementById('typingText').style.fontSize = '32px';
-            } else {
-                document.getElementById('typingText').style.fontSize = '48px';
-            }
-        }
+        // function adjustTextSize() {
+        //     if (window.innerWidth < 600) {
+        //         document.getElementById('typingText').style.fontSize = '32px';
+        //     } else {
+        //         document.getElementById('typingText').style.fontSize = '48px';
+        //     }
+        // }
 
-        window.onload = adjustTextSize;
-        window.addEventListener('resize', adjustTextSize);
+        // window.onload = adjustTextSize;
+        // window.addEventListener('resize', adjustTextSize);
 
-        window.onload = function () {
-            const text = "Hello, I'm Zhuohang Yu!";
-            const element = document.createElement('p');
-            element.id = 'typingText';
-            document.getElementById('mask').appendChild(element);
-            typeWriter(text, element, 100);
-        };
+        // window.onload = function () {
+        //     const text = "Hello, I'm Zhuohang Yu!";
+        //     const element = document.createElement('p');
+        //     element.id = 'typingText';
+        //     document.getElementById('mask').appendChild(element);
+        //     typeWriter(text, element, 100);
+        // };
 
         var today = new Date();
         var birthDate = new Date(2004, 6, 29);
